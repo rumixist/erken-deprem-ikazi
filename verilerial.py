@@ -17,19 +17,15 @@ cursor = conn.cursor()
 # Deprem tablosu oluştur (ilk çalıştırmada)
 cursor.execute('''
 CREATE TABLE IF NOT EXISTS earthquakes (
-    tarih TEXT,  -- 'timestamp' yerine 'tarih' kullanıldı
+    tarih TEXT,  
     enlem REAL,
     boylam REAL,
     derinlik REAL,
     tip TEXT,
     buyukluk REAL,
-    UNIQUE(tarih)  -- 'timestamp' yerine 'tarih' ile UNIQUE kısıtlaması
+    UNIQUE(tarih)
 )
 ''')
-
-# Öncü Deprem Analizi için eşik değerleri
-foreshock_threshold = 4.0  # Öncü depremler için büyüklük eşik değeri
-foreshock_time_window = 10  # Öncü depremlerin zaman aralığı (dakika cinsinden)
 
 def is_in_marmara(enlem, boylam):
     return min_lat <= enlem <= max_lat and min_lon <= boylam <= max_lon
