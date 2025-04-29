@@ -1,0 +1,18 @@
+# Python bytecode
+*.pyc
+*.pyo
+__pycache__/
+
+# Virtual Environment
+venv/
+.env/
+
+# IDE ve Text Editor dosyaları
+.vscode/
+.idea/
+
+# Depolama veya veri dosyaları
+*.sqlite3
+
+# Diğer
+.DS_Store
