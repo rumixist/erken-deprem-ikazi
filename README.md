@@ -1,1 +1,1 @@
-# erken-deprem-ikazi
+# MARDA (Marmara Depremleri Ağı)
